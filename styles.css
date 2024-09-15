@@ -13,6 +13,10 @@
     --contrast-color: #596D48;
 }
 
+::selection {
+    background-color: var(--contrast-color);
+}
+
 body {
     height: 100vh;
     display: flex;
@@ -35,7 +39,7 @@ body {
     margin-left: 6%;
 }
 
-.background {
+.image-sidebar {
     position: relative;
     height: 100%;
     width: 35%;
@@ -61,7 +65,7 @@ body {
 
 .hero-text {
     font-family: odin;
-    font-size: 6rem;
+    font-size: 5.5rem;
 }
 
 .credit-container {
@@ -74,7 +78,8 @@ body {
 }
 
 .top-text {
-    font-size: 1.4rem;
+    width: 70%;
+    font-size: 1.45rem;
     font-weight: 500;
 }
 
@@ -92,7 +97,7 @@ form {
     padding-top: 20px; 
     padding-bottom: 20px; 
     background-color: white;
-    box-shadow: 0px 6px 3px rgb(224, 224, 224);;
+    box-shadow: 0px 6px 8px rgb(218, 218, 218);;
 }
 
 .signup-controls {
@@ -102,20 +107,41 @@ form {
     gap: 25px;    
 }
 
-.control-element > input {
+.control-element {
+    font-weight: 500;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    color: rgb(48, 48, 48);
+    font-size: 0.73rem;
+    letter-spacing: 1.7px;
+}
+
+.text-input {
+    font-size: 0.95rem;
+    padding-left: 10px;
+    padding-right: 10px;
     margin-top: 2px;
     border: 1px solid #E5E7EB;
     border-radius: 2px;
     height: 30px;
 }
 
-.control-element {
-    color: rgb(48, 48, 48);
-    font-size: 0.8rem;
-    font-weight: 500;
-    width: 40%;
-    display: flex;
-    flex-direction: column;
+.text-input:focus {
+    outline: 1px solid #4f71cf;
+    box-shadow: 3px 3px 5px rgb(196, 196, 196);;
+}
+
+.pass:user-invalid,
+.confirm-pass:user-invalid {
+    outline: 1px solid red;
+}
+.pass,
+.confirm-pass {
+    letter-spacing: 3px;
 }
 
 .form-row-1,
@@ -128,7 +154,7 @@ form {
 
 .submit-button {
     color: white;
-    font-size: 0.9rem;
+    font-size: 1rem;
     font-weight: 600;
     background-color: var(--contrast-color);
     padding: 15px 50px;
@@ -138,3 +164,8 @@ form {
     margin-bottom: 20px;
 }
 
+.login-link {
+    color: var(--contrast-color);
+    text-decoration: none;
+    font-weight: 600;
+}
